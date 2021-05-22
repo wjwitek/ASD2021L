@@ -1,0 +1,21 @@
+Zad 1:
+- brak komentarzy
+- brak napisanej złożoności obliczniowej
+- brak napisane złożoności pamięciowej
+- nie działa dla T3 (jeśli wierzchołek 0 jest podany w środku maksymalnej ścieżki)
+
+0/2
+
+Zad 2:
+- brak napisanej złożoności obliczeniowej
+- nie działa
+
+0/2
+
+Zad 3:
+- przeliczanie cyfr za każdym razem
+- niepotrzebnie używasz O(n^2) pamięci na A, i tak zawsze odwołujesz się tylko do wiersza i
+- masz O(n^3), ale to nasze rozwiązanie O(n^2) nie działa, a nie wiem czy ktoś w końcu wymyślił dziające O(n^2), więc
+imo jest to poprawna złożoność
+
+1.5/2
