@@ -1,0 +1,38 @@
+Zad 1:
+No co mogę powiedzieć, chyba jest ok xD
+Ciut mało komentarzy, no ale tam nie ma co powiedzieć.
+2/2
+
+Zad 2:
+- brak opisu "głównego" algorytmu
+- brak oszacowania złożonośći czasowej
+- poza tym chyba wszytsko ok
+1.5/2
+
+Zad 3:
+- nie działa dla testu G6 i G8
+Z czego chyba to wynika:
+Oznaczasz odwiedzanie wierzchołków nie krawędzi - więc np. jeśli ta ścieżka między X a Y z DFS zawrze Ci wszystkie
+wierzchołki, ale nie wszystkie krawęzie, to w linii 102 Ci zrobi od razu return (np. dla testu G8).
+Ogólnie: nie działa w przypadku kiedy w zbiorze wierzchołków istnieje więcej niż jeden cykl/ścieżka przechodzący przez
+wszystkie te wierzchołki.
+
+
+
+Dodatkowe testy do 3:
+G6 = [(1, 2), (1, 0), (2, 5), (2, 3), (3, 7), (3, 4), (0, 2), (0, 5), (0, 6), (5, 8), (5, 3), (5, 7), (6, 5),
+      (7, 0), (7, 1), (8, 0)]
+a6, b6 = 1, 4
+odp6 = [1, 0, 2, 5, 7, 0, 5, 0, 6, 5, 3, 7, 1, 2, 3, 4]  # przy czym jest to odp przykładowa, jest kilka możliwości
+
+G7 = [(0, 1), (0, 3), (1, 2), (1, 5), (5, 6), (6, 3), (3, 1), (3, 4), (4, 0)]
+a7, b7 = 0, 2
+odp7 = [0, 3, 1, 5, 6, 3, 4, 0, 1, 2]
+
+G8 = [(0, 1), (1, 2), (2, 3), (3, 2), (3, 4), (2, 5), (5, 3)]
+a8, b8 = 0, 4
+odp8 = [0, 1, 2, 3, 2, 5, 3, 4]
+
+print(darmowe_przejazdy_XD(G6, 1, 4))
+print(darmowe_przejazdy_XD(G7, a7, b7))
+print(darmowe_przejazdy_XD(G8, a8, b8))

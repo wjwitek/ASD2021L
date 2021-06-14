@@ -3,15 +3,21 @@ from node_functions import Node
 
 
 # insertion sort for array [Python list]
-def insertion_sort_array(list_to_sort):
+def insertion_sort_array(list_to_sort, idx=None):
     n = len(list_to_sort)
     for i in range(n):
         el = list_to_sort[i]
         k = i - 1
-        while el < list_to_sort[k] and k > - 1:
-            list_to_sort[k + 1] = list_to_sort[k]
-            list_to_sort[k] = el
-            k -= 1
+        if idx is not None:
+            while el[idx] < list_to_sort[k][idx] and k > - 1:
+                list_to_sort[k + 1] = list_to_sort[k]
+                list_to_sort[k] = el
+                k -= 1
+        else:
+            while el < list_to_sort[k] and k > - 1:
+                list_to_sort[k + 1] = list_to_sort[k]
+                list_to_sort[k] = el
+                k -= 1
 
 
 # selection sort for array [Python list]

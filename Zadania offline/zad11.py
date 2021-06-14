@@ -97,8 +97,8 @@ def remove(root, key):
 
 
 # function used for tests
-# def in_order_tree_walk(root):
-#     if root is not None:
-#         in_order_tree_walk(root.left)
-#         print(root.key, end=" ")
-#         in_order_tree_walk(root.right)
+def in_order_tree_walk(root):
+    if root is not None:
+        in_order_tree_walk(root.left)
+        print(root.key, end=" ")
+        in_order_tree_walk(root.right)
