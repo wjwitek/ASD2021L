@@ -17,7 +17,9 @@ def floyd_warshall(graph):
     shortest = [[-1 for _ in range(n)] for _ in range(n)]
     for i in range(n):
         for j in range(n):
-            if graph[i][j] == 0:
+            if i == j:
+                shortest[i][j] = 0
+            elif graph[i][j] == 0:
                 shortest[i][j] = float('inf')
             else:
                 shortest[i][j] = graph[i][j]
@@ -45,4 +47,13 @@ def BlueAndGreen(T, K, D):
     return edmonds_karp(graph, n, n + 1)
 
 
-runtests(BlueAndGreen)
+#runtests(BlueAndGreen)
+
+G = [[0, 2, 0, 3, 0],
+     [2, 0, 2, 1, 2],
+     [0, 2, 0, 0, 1],
+     [3, 1, 0, 0, 4],
+     [0, 2, 1, 4, 0],]
+K = ['B','B','B','G','G']
+
+print(BlueAndGreen(G,K,3))
