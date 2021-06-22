@@ -84,8 +84,5 @@ def cutthetree(T):
             current = current.parent
     return T.left.value + T.right.value
 
-
     
 runtests(cutthetree)
-
-
