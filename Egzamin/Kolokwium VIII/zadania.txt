@@ -1,0 +1,40 @@
+Zad 1
+Poszukiwacz przygód startuje z pola d i ma 0 punktów doświadczenia, ale jego marzeniem jest pokonać strasznego smoka na
+polu s. W krainie w której mieszka znajdują się siedliska potworów z którymi może walczyć i drogi pomiędzy nimi, każda
+o określonym czasie podróży. Każdy potwór ma określoną minimalną liczbę punktów doświadczenia, która jest potrzebna, aby
+poszukiwacz przygód był w stanie go pokonać oraz liczbę punktów, która dostanie za jego pokonanie. Jeśli poszukiwacz
+przygód boi się walczyć z potworem, to może skradać się i ominąć walkę, ale zajmie mu to t czasu. Każde siedlisko
+odwiedza on co najwyżej raz, bo chce zobaczyć różne miejsca. Napisz funkcję adventure(G, P, d, s, t), gdzie G to macierz
+określająca drgogi między siedliskami, P lista krotek zawierających (potrzebne exp, zdobywane exp), d - punkt startowy,
+s - siedlisko smoka, t - czas skradania, która obliczy ile co najmniej czasu mu zajmie taka przygoda lub która zwróci
+None jeśli jest ona niemożliwa.
+
+Jak to jest zatrudne, to może tylko określenie czy jest takie coś możliwe/zabranie możliwości skradania.
+
+
+
+Zad 2
+W Algocji wybudowano nowe osiedle i wyznaczono drogi łączące domki. Aby algorytmicy mogli się wprowadzić, do każdego
+domku należy doprowadzić wodę od źródła w i prąd od źródła p. Przepisy budowlane Algocji wymagają aby wodę i prąd
+prowadzić pod drogą i aby pod jedną drogą była tylko albo woda albo prąd. Napisz funkcję residential(G, w, p), która
+określi czy da się poprowadzić wodę i gaz przy obecnej sieci dróg. Modyfikacja: jeśli się nie da, to jaka jest
+najmniejsza możliwa liczba domków, które zostaną bez któregoś z mediów.
+
+
+
+Zad 3
+Jednorożec jest na skrzyżowaniu A i ucieka przed kłusownikami, którzy ruszają za nim po czasie t. Każda droga ma jeden
+z trzech rodzajów terenu: las (0), bruk (1) lub łąka (3). Jednrożec biegnąc przez las pokonuje drogę między
+skrzyżowaniami w czasie 1, po bruku w czasie 3, po łące w czasie 2. Dla kłusowników te czasy wynoszą odpowiednio
+3, 1, 2. Kłusownicy zawsze poruszają się tą samą trasą co jednorożec (bo nie chcą zgubić tropu). Uda im się go
+złapać jeśli w tym samym czasie co on dotrą na skrzyżowanie. Jednorożec aby być bezpieczny musi udać do Pradawnej
+Puszczy, która zaczyna się na skrzyżowaniu B, nie może też przejśc dwa razy przez to samo skrzyżowanie, bo
+kłusownicy zostawiają za sobą pułapki. Napisz funkcję unicorn(G, A, B, t), która sprawdzi czy jednorożec jest w stanie
+umknąć. Modyfikacja: 1, 2, 3 to nie czasy a mnożniki czasów przypisanych krawędziom/jaki jest najkrótszy czas ucieczki.
+
+- chyba do zrobienia w podobny sposób jak 1 na ostatnim kolosie, przy czym dodajemy po dwa wierzchołki w środek każdej
+krawędzi i trochę inne warunki na istnienie krawędiz w nowym grafie
+
+Inna wersja: karawana ma z góry zaplanowaną trasę, grupa złodziei chce zastawić na nich pułapkę. Aby to zrobić muszą
+na dane skrzyżowanie dotrzeć w czasie o t mniejszym niż karawana. Ruszają z kryjówki w A, czy są w stanie napaść
+karawanę i jaki jest najkrótszy możlwy czas podróży na miejsce zasadzki.

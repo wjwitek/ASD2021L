@@ -29,7 +29,7 @@ def adjacency_weight(n, edges):
 if __name__ == "__main__":
     rep_type = input("representation: ")
     weight = int(input("weighted: "))
-    m = int(input("number of edges: "))
+    m = int(input("number of vertexes: "))
     edge = []
     temp = input()
     while temp != "end":

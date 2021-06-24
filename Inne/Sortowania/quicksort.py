@@ -63,3 +63,4 @@ def quicker_sort(tab, p, r):
         else:
             quicker_sort(tab, right, r)
             r = left
+
