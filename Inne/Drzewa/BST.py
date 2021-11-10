@@ -68,8 +68,9 @@ class Tree:
             node = node.parent
         return node
 
-    def insert(self, new_key):
+    def insert(self, new_key, misc=None):
         new_node = Node(new_key)
+        new_node.misc = None
         if self.root is None:
             self.root = new_node
             return True
